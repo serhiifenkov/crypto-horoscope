@@ -209,6 +209,12 @@ export default function HomePage() {
     setOriginalHoroscope('');
     setMarketContext('');
 
+    // прелоад фону картки
+  if (typeof window !== 'undefined') {
+    const img = new window.Image();
+    img.src = getCardImage(sign);
+  }
+
     // скидати прогрес перед стартом
     setLoadingStep(0);
     setProgress(0);

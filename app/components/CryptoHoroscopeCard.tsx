@@ -17,7 +17,7 @@ export function CryptoHoroscopeCard({
   signIcon,
   weekDates,
   cryptoText,
-  cardImage = '/cards/default.png',
+  cardImage = '/cards/default.webp',
   onShare,
   onClose,
 }: CryptoHoroscopeCardProps) {
@@ -40,14 +40,16 @@ export function CryptoHoroscopeCard({
       }}
     >
       {/* Фонова картка знаку */}
-      <Image
+     <Image
   src={cardImage}
   alt={sign}
   fill
   sizes="300px"
-  fetchPriority="high" // у Next 16 заміна priority[web:148]
+  preload
+  fetchPriority="high"
   style={{ objectFit: 'cover' }}
 />
+
 
       {/* Нижній блок із текстом прогнозу */}
       <div
