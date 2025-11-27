@@ -1,5 +1,6 @@
 // components/CryptoHoroscopeCard.tsx
 import React from 'react';
+import Image from 'next/image';
 
 export type CryptoHoroscopeCardProps = {
   sign: string;              // Назва знаку, напр. 'Leo'
@@ -39,16 +40,14 @@ export function CryptoHoroscopeCard({
       }}
     >
       {/* Фонова картка знаку */}
-      <img
-        src={cardImage}
-        alt={sign}
-        style={{
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
-          display: 'block',
-        }}
-      />
+      <Image
+  src={cardImage}
+  alt={sign}
+  fill
+  sizes="300px"
+  fetchPriority="high" // у Next 16 заміна priority[web:148]
+  style={{ objectFit: 'cover' }}
+/>
 
       {/* Нижній блок із текстом прогнозу */}
       <div
