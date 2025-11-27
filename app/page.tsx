@@ -1,6 +1,10 @@
 // app/page.tsx
 'use client';
 
+import { sdk } from '@farcaster/miniapp-sdk';
+// решта імпортів
+
+
 import { useState, useEffect } from 'react';
 import { CryptoHoroscopeCard } from './components/CryptoHoroscopeCard';
 
@@ -129,6 +133,11 @@ export default function HomePage() {
       setCryptoHoroscope('Error during adaptation');
     }
   };
+
+  useEffect(() => {
+  sdk.actions.ready().catch(() => {});
+}, []);
+
 
   // як тільки є оригінал + контекст — запускаємо адаптацію
   useEffect(() => {
