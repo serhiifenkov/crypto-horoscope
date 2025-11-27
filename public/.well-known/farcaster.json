@@ -1,0 +1,9 @@
+{
+  "miniapp": {
+    "name": "Weekly Crypto Horoscope",
+    "description": "AI-powered weekly crypto horoscope based on your zodiac sign.",
+    "icon": "https://crypto-horoscope-beta.vercel.app/icon.png",
+    "homeUrl": "https://crypto-horoscope-beta.vercel.app/",
+    "splashBackgroundColor": "#05030a"
+  }
+}
