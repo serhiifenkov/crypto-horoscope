@@ -56,22 +56,23 @@ export default function HomePage() {
   };
 
   function getCardImage(sign: string): string {
-    const map: Record<string, string> = {
-      Aries: '/cards/aries.png',
-      Taurus: '/cards/taurus.png',
-      Gemini: '/cards/gemini.png',
-      Cancer: '/cards/cancer.png',
-      Leo: '/cards/leo.png',
-      Virgo: '/cards/virgo.png',
-      Libra: '/cards/libra.png',
-      Scorpio: '/cards/scorpio.png',
-      Sagittarius: '/cards/sagittarius.png',
-      Capricorn: '/cards/capricorn.png',
-      Aquarius: '/cards/aquarius.png',
-      Pisces: '/cards/pisces.png',
-    };
-    return map[sign] ?? '/cards/default.png';
-  }
+  const map: Record<string, string> = {
+    Aries: '/cards/aries.webp',
+    Taurus: '/cards/taurus.webp',
+    Gemini: '/cards/gemini.webp',
+    Cancer: '/cards/cancer.webp',
+    Leo: '/cards/leo.webp',
+    Virgo: '/cards/virgo.webp',
+    Libra: '/cards/libra.webp',
+    Scorpio: '/cards/scorpio.webp',
+    Sagittarius: '/cards/sagittarius.webp',
+    Capricorn: '/cards/capricorn.webp',
+    Aquarius: '/cards/aquarius.webp',
+    Pisces: '/cards/pisces.webp',
+  };
+  return map[sign] ?? '/cards/default.webp';
+}
+
 
   function getSignIcon(sign: string) {
     const icons: { [key: string]: string } = {
