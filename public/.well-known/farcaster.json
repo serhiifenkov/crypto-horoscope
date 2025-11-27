@@ -4,11 +4,11 @@
     "description": "AI-powered weekly crypto horoscope based on your zodiac sign.",
     "icon": "https://crypto-horoscope-beta.vercel.app/icon.png",
     "homeUrl": "https://crypto-horoscope-beta.vercel.app/",
-    "splashBackgroundColor": "#05030a",
-    "accountAssociation": {
+    "splashBackgroundColor": "#05030a"
+  },
+  "accountAssociation": {
     "header": "eyJmaWQiOjIzODYyMiwidHlwZSI6ImF1dGgiLCJrZXkiOiIweDUwYTMyNTIwOTU0OTZlMDczYTFiQjA5MWVkQjZlQzg1Q0MwQzk3ODUifQ",
     "payload": "eyJkb21haW4iOiJjcnlwdG8taG9yb3Njb3BlLWJldGEudmVyY2VsLmFwcCJ9",
     "signature": "eLvHASbdEtDIJgTn9Ux7c3PfyxXYeBBb59KxO4TlCacQaRcgSDP/uLIxzuFINCuwA59pG+O2kYOHTccfsXfb4Rw="
-    }
-}
+  }
 }
