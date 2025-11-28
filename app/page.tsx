@@ -525,14 +525,9 @@ export default function HomePage() {
               onShare={async () => {
   try {
     const baseUrl = 'https://crypto-horoscope-beta.vercel.app/share';
-    const shareUrl = `${baseUrl}?text=${encodeURIComponent(cryptoHoroscope)}`;
-
-    console.log('SHARE URL >>>', shareUrl);
-
-    await sdk.actions.composeCast({
-      text: 'I just got a weekly crypto horoscope prediction ✨',
-      embeds: [shareUrl],
-    });
+const shareUrl = `${baseUrl}?text=${encodeURIComponent(
+  cryptoHoroscope + ' ✨',
+)}`;
   } catch (e) {
     console.error('composeCast error', e);
   }
