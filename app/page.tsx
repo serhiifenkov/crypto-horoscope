@@ -517,24 +517,31 @@ export default function HomePage() {
               zIndex: 50,
             }}
           >
-            <CryptoHoroscopeCard
-              sign={sign}
-              signIcon={getSignIcon(sign)}
-              cryptoText={cryptoHoroscope}
-              cardImage={getCardImage(sign)}
-              onShare={async () => {
-  try {
-    const baseUrl = 'https://crypto-horoscope-beta.vercel.app/share';
-const shareUrl = `${baseUrl}?text=${encodeURIComponent(
-  cryptoHoroscope + ' ✨',
-)}`;
-  } catch (e) {
-    console.error('composeCast error', e);
-  }
-}}
+        <CryptoHoroscopeCard
+  sign={sign}
+  signIcon={getSignIcon(sign)}
+  cryptoText={cryptoHoroscope}
+  cardImage={getCardImage(sign)}
+  onShare={async () => {
+    try {
+      const baseUrl = 'https://crypto-horoscope-beta.vercel.app/share';
+      const shareUrl = `${baseUrl}?text=${encodeURIComponent(
+        cryptoHoroscope + ' ✨',
+      )}`;
 
-              onClose={() => setShowCard(false)}
-            />
+      console.log('SHARE URL >>>', shareUrl);
+
+      await sdk.actions.composeCast({
+        text: 'I just got a weekly crypto horoscope prediction ✨',
+        embeds: [shareUrl],
+      });
+    } catch (e) {
+      console.error('composeCast error', e);
+    }
+  }}
+  onClose={() => setShowCard(false)}
+/>
+
           </div>
         )}
       </div>
