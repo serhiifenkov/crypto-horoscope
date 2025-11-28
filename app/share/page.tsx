@@ -3,7 +3,8 @@ import type { Metadata } from 'next';
 
 const MINIAPP_URL = 'https://crypto-horoscope-beta.vercel.app';
 
-const imageUrl = `${MINIAPP_URL}/icon.png`;
+const imageUrl = `${MINIAPP_URL}/api/og?text=Your%20weekly%20crypto%20horoscope%20is%20ready%20%E2%9C%A8`;
+
 const buttonTitle = 'Get your crypto horoscope';
 
 const metaContent = JSON.stringify({
